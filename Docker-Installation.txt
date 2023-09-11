@@ -1,0 +1,61 @@
+In Ubuntu Server
+----------------------
+Method-1
+=======
+
+Step 1: Update all Software Repositories using below command.
+
+#sudo apt-get update
+
+Step 2: Install a Docker using below command
+
+#sudo apt install docker.io -y
+
+Step 3: Enable and start the docker service as follows.
+
+#sudo systemctl enable docker
+#sudo systemctl start docker
+
+Step 4: Check the  docker version
+
+#docker --version
+
+# You will get permison denied error as regular user dosn't have permisions to execute docker commands, add ubuntu user to docker group.
+
+#sudo usermod -aG docker $USER
+     or 
+#sudo usermod -aG docker ubuntu
+
+# Exit From Current SSH Terminal & SSH(Login) again .Then execute
+docker ps
+
+To Un Install a docker
+-----------------------------
+Use below command to un-install docker
+#apt-get remove docker docker-engine docker.io -y
+
+============================================================================
+
+ In Amazon Linux
+-----------------------
+sudo yum update -y       
+sudo yum install docker -y
+sudo service docker start
+
+Add Regural user to dockergroup
+sudo usermod -aG docker  <username>
+
+ex:
+sudo usermod -aG docker ec2-user
+
+Once you add user to group exit from the server and login again.
+# Get docker information
+docker info
+
+#Install Docker in Linux (Works for most of linux flavors).
+sudo curl -fsSL get.docker.com | /bin/bash
+
+Docker Home Directory/Working Dir:
+/var/lib/docker
+
+============================================================================
