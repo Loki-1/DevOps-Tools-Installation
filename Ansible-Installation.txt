@@ -1,0 +1,102 @@
+                                               Ansible Installation
+
+
+1) Create RedHat 3 Servers (1-AnsibleServer , 2- Host Machines for demo) in AWS.
+ 
+2) Login As a root user and create ansible user and provide sudo access in all Servers.
+       2.1) Create the user ansible and set the password on all hosts:
+                        sudo useradd ansible
+                        sudo passwd ansible
+
+       2.2) Make the necessary entry in sudoers file /etc/sudoersfor ansible        
+           user for password-less sudo access:
+                     visudo
+                  
+                    ansible ALL=(ALL) NOPASSWD: ALL
+
+       2.3) Make the necessary changes  in sshd_config file /etc/ssh/sshd_config    
+           to enable password based authentication.
+
+         Un comment PasswordAuthentication yes
+         and comment  PasswordAuthentication no.
+         And save the file .
+
+                       vi /etc/ssh/sshd_config
+
+     2.4)    Then restart sshd service.
+                      sudo service sshd restart
+
+=============================================================================
+               Install Ansible in Red hat (Ansible Server)
+=============================================================================
+
+1)     SSH to Redhat System & Switch to ansible user
+       sudo su - ansible
+      
+2)     Install python
+       sudo yum install python3 -y
+      
+3)    Update python alaternatives
+       sudo alternatives --set python /usr/bin/python3
+      
+4)    Verify Python Version
+         python --version
+ 
+5)    Install ansible using Yum 
+         sudo yum -y install ansible
+      
+6)    Verify Ansible version
+       ansible --version
+       
+=============================================================================
+               Generate SSH Key, Copy SSH Key(Ansible Server)
+=============================================================================
+
+1)    Now generate SSH key in Ansible Server: 
+
+         sudo su - ansible
+         ssh-keygen
+
+2)    Copy it to Host  servers as ansible user: 
+
+  Repeat below command by updating HOST IP for all the  HOST Servers. 
+
+          ssh-copy-id ansible@<HostIP>
+
+ 
+
+Update Host Inventory in Ansible Server to add host servers’ details.
+
+1)    Add Host Server details
+
+           vi  /etc/ansible/hosts
+
+ # Connect using username and password
+
+             192.168.1.105 ansible_user=ansible ansible_password=password
+
+ # Connect using username and pem(Make Sure Have pem file at given path)
+
+            172.31.35.23 ansible_user=ec2-user ansible_ssh_private_key_file=~/aws.pem
+
+ # If ssh keys are copied
+
+              172.31.35.23
+
+ 2)    Use ping module to test Ansible and after successful run you can see the below output. 
+
+            ansible all -m ping
+
+            172.31.35.23 | SUCCESS => {
+
+            "changed": false,
+
+             "ping": "pong"
+
+             }
+
+ 3)    Install sshpass in Ansible server if you get below error .
+
+ "to use the 'ssh' connection type with passwords, you must install the sshpass program
+
+$ sudo yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/sshpass-1.06-2.el7.x86_64.rpm
