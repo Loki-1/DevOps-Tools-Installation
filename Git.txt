@@ -13,3 +13,26 @@ Stage all files   ---------------> $ git add .
 Commit all staged files to git ---> $ git commit -m "commit message"
 
 ------------------------------------------------------------------------------------------------
+
+                ******************* Branches ************************
+
+List all local branches.  -----------------> $ git branch
+Create a new branch        ----------------> $ git branch <new-branch>
+Switch to a branch         ----------------> $ git checkout <branch>
+Create a new branch and switch to it ------> $ git checkout -b <newbranch>
+Delete a merged branch       --------------> $ git branch -d <branch>
+Add a tag to current commit  --------------> $ git tag <tag-name>
+
+----------------------------------------------------------------------------------------------------
+
+               ******************** git Push Process *****************
+
+to check origin repo added correctly or not -------> git remote -v
+To change remote repo origin ----------------------> git remote set-url origin <link>
+Now check again               ---------------------> git remote -v
+add origin                           --------------> git remote add origin <link>
+To push code to remote                      -------> git push -u origin main
+ if we receive any error like : failed to push some refs to link
+then enter below command and push again
+          git pull --rebase origin master/main
+-----------------------------------------------------------------------------------------------------
