@@ -1,8 +1,8 @@
                **************Setup********************
 
-$ git config --global user.name "Danny Adams"
+$ git config --global user.name "Lokesh Nagam"
 
-$ git config --global user.email "myemail@gmail.com"
+$ git config --global user.email "lokesh.naagam@gmail.com"
 -----------------------------------------------------------------------------------------------
 
            ***************Starting a Project with Git******************************88
