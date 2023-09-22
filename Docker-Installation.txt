@@ -1,6 +1,6 @@
-In Ubuntu Server
+In Ubuntu Server : 
 ----------------------
-Method-1
+Method-1 : 
 =======
 
 Step 1: Update all Software Repositories using below command.
@@ -29,14 +29,14 @@ Step 4: Check the  docker version
 # Exit From Current SSH Terminal & SSH(Login) again .Then execute
 docker ps
 
-To Un Install a docker
+To Un Install a docker ;
 -----------------------------
 Use below command to un-install docker
 #apt-get remove docker docker-engine docker.io -y
 
 ============================================================================
 
- In Amazon Linux
+ In Amazon Linux :
 -----------------------
 sudo yum update -y       
 sudo yum install docker -y
