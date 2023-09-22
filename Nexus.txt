@@ -1,4 +1,5 @@
-Login as a root user
+Login as a root user :-
+
 sudo su -
 cd /opt
 yum install tar wget -y
@@ -49,7 +50,7 @@ http://IPAddess/Hostname:8081/
 User Name:
 Password:
 
-Troubleshooting
+Troubleshooting :
 ---------------------
 nexus service is not starting?
 
@@ -58,7 +59,7 @@ b)make sure you are trying to start nexus service with nexus user.
 c)check java is installed or not using java -version command.
 d) check the nexus.log file which is availabe in  /opt/sonatype-work/nexus3/log  directory.
 
-Unable to access nexus URL?
+Unable to access nexus URL?.
 -------------------------------------
 a)make sure port 8081 is opened in security groups in AWS ec2 instance.
 
