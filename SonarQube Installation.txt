@@ -46,7 +46,7 @@ a)make sure you need to change the ownership and group to /opt/sonarqube/ direct
 b)make sure you are trying to start sonar service with sonar user.
 c)check java is installed or not using java -version command.
 
-Unable to access SonarQube server URL in browser?
+Unable to access SonarQube server URL in browser.?
 
 a)make sure port 9000 is opened in security groups - AWS ec2 instance.
 
