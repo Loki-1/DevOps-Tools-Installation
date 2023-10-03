@@ -1,4 +1,4 @@
-Login as a root user :-
+Login as a root user. :-
 
 sudo su -
 cd /opt
@@ -23,7 +23,7 @@ chown -R nexus:nexus /opt/sonatype-work
 chmod -R 775 /opt/nexus
 chmod -R 775 /opt/sonatype-work
 
-#Open /opt/nexus/bin/nexus.rc file and  uncomment run_as_user parameter and set as nexus user.
+Open /opt/nexus/bin/nexus.rc file and  uncomment run_as_user parameter and set as nexus user.
 
 vi /opt/nexus/bin/nexus.rc
 run_as_user="nexus"
