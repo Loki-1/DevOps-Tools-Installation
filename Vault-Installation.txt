@@ -12,3 +12,7 @@ yum install wget unzip vim -y
 cd /opt
 
 #Download the Vault software.
+https://www.vaultproject.io/downloads/
+
+wget https://releases.hashicorp.com/vault/1.3.2/vault_1.3.2_linux_amd64.zip
+
