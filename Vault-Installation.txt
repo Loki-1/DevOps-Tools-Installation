@@ -8,3 +8,5 @@ yum update -y
 yum install wget unzip vim -y
 
 
+#Go to /opt dir
+cd /opt
