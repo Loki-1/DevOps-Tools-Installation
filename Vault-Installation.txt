@@ -1,1 +1,10 @@
+#Login as a root user in ec2 instance
+sudo su -
+
+#You will need to upgrade your system and packages
+yum update -y
+
+#Install wget and unzip packages
+yum install wget unzip vim -y
+
 
