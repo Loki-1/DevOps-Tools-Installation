@@ -10,3 +10,5 @@ yum install wget unzip vim -y
 
 #Go to /opt dir
 cd /opt
+
+#Download the Vault software.
