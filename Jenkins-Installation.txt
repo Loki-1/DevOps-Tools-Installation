@@ -1,3 +1,5 @@
+## Installation in Linux Server
+
 Login as a root user
 
 sudo yum update –y
@@ -22,3 +24,5 @@ Enable and start the jenkins service
 systemctl enable jenkins
 
 systemctl start jenkins
+
+## Installation in Ubuntu Server
