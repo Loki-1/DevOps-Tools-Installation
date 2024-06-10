@@ -19,7 +19,7 @@ sudo dnf install java-17-amazon-corretto -y
 
 yum install jenkins -y
 
-Enable and start the jenkins service
+## Enable and start the jenkins service
 
 systemctl enable jenkins
 
@@ -40,3 +40,10 @@ sudo apt install fontconfig openjdk-17-jre
 java -version
 
 sudo apt-get install jenkins
+
+## Enable and start the jenkins service
+
+systemctl enable jenkins
+
+systemctl start jenkins
+
