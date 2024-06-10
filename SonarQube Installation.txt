@@ -37,6 +37,9 @@ su - sonar
 cd /opt/sonarqube/bin/linux-x86-64/
 ./sonar.sh start
 
+user:admin
+password: admin now I changed it as sonar
+
 Troubleshooting
 --------------------
 
