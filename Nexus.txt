@@ -3,9 +3,9 @@ Login as a root user. :-
 sudo su -
 cd /opt
 yum install tar wget -y
-wget http://download.sonatype.com/nexus/3/nexus-3.15.2-01-unix.tar.gz
-tar -zxvf nexus-3.15.2-01-unix.tar.gz
-mv /opt/nexus-3.15.2-01 /opt/nexus
+wget https://download.sonatype.com/nexus/3/nexus-3.69.0-02-java8-unix.tar.gz
+tar -zxvf nexus-3.69.0-02-java8-unix.tar.gz
+mv /opt/nexus-3.69.0-02 /opt/nexus
 
 #As a good security practice, Nexus is not advised to run nexus service as a root user, so create a new user called nexus and grant sudo access to manage nexus services as follows.
  
