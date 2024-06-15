@@ -1,5 +1,16 @@
                ***************************** SonarQube Server Installation  ********************************
 
+# Simple and Easy way :
+
+sudo su -
+sudo yum install java-1.8.0-amazon-corretto-devel
+sudo wget -O /etc/yum.repos.d/sonar.repo http://downloads.sourceforge.net/project/sonar-pkg/rpm/sonar.repo
+sudo yum install sonar -y
+service start sonar
+   or
+sudo systemctl start sonar
+
+
 #Hardware Requirements for SonarQube
 ----------------------------------------------------
 #The SonarQube server requires at least 2GB of RAM to run efficiently and 1GB of free RAM for the OS.
